@@ -1,200 +1,80 @@
-/* --- 通用樣式與變數設定 --- */
-:root {
-    --bg-color: #1a202c;
-    --card-bg-color: #2d3748;
-    --accent-color: #4fd1c5;
-    --text-color: #f7fafc;
-    --header-font: 'Montserrat', sans-serif;
-    --body-font: 'Roboto', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[請填寫你的名字] - 個人介紹</title>
+    
+    <!-- Google Fonts 引入 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- 連結外部 CSS 檔案 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-html {
-    scroll-behavior: smooth;
-}
+    <!-- 導覽列 -->
+    <header class="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">關於我</a></li>
+                <li><a href="#projects">專案</a></li>
+                <li><a href="#contact">聯絡</a></li>
+            </ul>
+        </nav>
+    </header>
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--body-font);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
+    <main>
+        <!-- 英雄區塊 -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>[請填寫你的名字]</h1>
+                <p class="subtitle">[請填寫你的學校與科系]</p>
+            </div>
+        </section>
 
-/* --- 排版與容器 --- */
-.content-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    text-align: center;
-}
+        <!-- 關於我 -->
+        <section id="about" class="content-section">
+            <h2>關於我</h2>
+            <p>
+                你好！我是一位對網頁開發充滿熱情的前端工程師，專注於打造使用者友善且高效能的網頁應用。我擅長使用 HTML, CSS 與 JavaScript，並持續學習最新的技術與框架，致力於將腦中的創意轉化為實際的產品。
+            </p>
+        </section>
 
-h1, h2, h3 {
-    font-family: var(--header-font);
-    font-weight: 700;
-    color: var(--text-color);
-}
+        <!-- 專案 -->
+        <section id="projects" class="content-section">
+            <h2>我的專案</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    <h3>專案一：響應式部落格網站</h3>
+                    <p>一個使用 HTML 和 CSS Grid 打造的現代化部落格平台，在不同裝置上都能提供絕佳的閱讀體驗。</p>
+                </div>
+                <div class="project-card">
+                    <h3>專案二：互動式待辦事項清單</h3>
+                    <p>透過 JavaScript 實現的新潮待辦事項應用，具備新增、刪除、標示完成等功能，幫助使用者有效管理任務。</p>
+                </div>
+            </div>
+        </section>
 
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
-}
+        <!-- 聯絡方式 -->
+        <section id="contact" class="content-section">
+            <h2>聯絡我</h2>
+            <p>如果您對我的作品感興趣，或是有任何合作機會，歡迎隨時與我聯繫！</p>
+            <a href="mailto:[請填寫你的Email]" class="cta-button">寄送 Email</a>
+        </section>
+    </main>
 
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
-}
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <span>&nbsp;•&nbsp;</span>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+        <p class="copyright">&copy; 2025 [請填寫你的名字]. All Rights Reserved.</p>
+    </footer>
 
-p {
-    font-size: 1.1rem;
-    color: #cbd5e0; /* 稍淺的文字顏色 */
-}
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #ffffff;
-}
-
-/* --- 導覽列 (Navbar) --- */
-.navbar {
-    background-color: var(--card-bg-color);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    font-family: var(--header-font);
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-/* --- 英雄區塊 (Hero Section) --- */
-.hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 60vh;
-    padding: 0 20px;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    margin: 0;
-}
-
-.hero-content .subtitle {
-    font-size: 1.5rem;
-    color: var(--accent-color);
-    margin-top: 10px;
-}
-
-/* --- 專案 (Projects) --- */
-.project-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-}
-
-.project-card {
-    background-color: var(--card-bg-color);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(79, 209, 197, 0.2);
-}
-
-.project-card h3 {
-    color: var(--accent-color);
-    margin-top: 0;
-    font-size: 1.5rem;
-}
-
-/* --- 聯絡方式 (Contact) --- */
-.cta-button {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #81e6d9; /* 亮一點的強調色 */
-    transform: scale(1.05);
-}
-
-/* --- 頁尾 (Footer) --- */
-.footer {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #121822; /* 更深的背景色 */
-    border-top: 1px solid var(--card-bg-color);
-}
-
-.social-links {
-    margin-bottom: 15px;
-}
-
-.social-links a {
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-.copyright {
-    font-size: 0.9rem;
-    color: #a0aec0; /* 更淺的文字顏色 */
-}
-
-/* --- 響應式設計 --- */
-@media (min-width: 768px) {
-    .project-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-    .hero-content .subtitle {
-        font-size: 1.2rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-}
+</body>
+</html>
