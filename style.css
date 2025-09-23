@@ -3,7 +3,6 @@
     --bg-color: #1a202c;
     --card-bg-color: #2d3748;
     --primary-color: #4fd1c5;
-    --secondary-color: #81e6d9; /* 新增一個用於漸層的輔助色 */
     --text-color: #f7fafc;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Roboto', sans-serif;
@@ -17,7 +16,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* 讓頁內跳轉有平滑過渡效果 */
 }
 
 body {
@@ -36,10 +35,6 @@ body {
 h1, h2, h3 {
     font-family: var(--font-heading);
     margin-bottom: 1rem;
-}
-
-h2 {
-    text-align: center;
 }
 
 section {
@@ -88,51 +83,37 @@ section {
     color: var(--primary-color);
 }
 
-/* --- 英雄區塊 (已修改) --- */
+/* --- 英雄區塊 --- */
 .hero-section {
-    height: 70vh;
+    height: 60vh;
     display: flex;
-    justify-content: flex-start; /* 改為靠左對齊 */
+    justify-content: center;
     align-items: center;
-    text-align: left; /* 改為靠左對齊 */
-    background-color: #111827;
-}
-
-.hero-section .container {
-    padding-left: 5%; /* 增加左邊距，讓內容向右移動 */
+    text-align: center;
+    background-color: #111827; /* 比背景更深的顏色 */
 }
 
 .hero-section h1 {
-    font-size: 4.5rem; /* 放大標題 */
-    font-weight: 700;
-    /* 建立漸層背景 */
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    /* 將背景裁剪為文字形狀 */
-    -webkit-background-clip: text;
-    background-clip: text;
-    /* 讓文字顏色變透明以顯示背景漸層 */
-    color: transparent;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 15px rgba(79, 209, 197, 0.2); /* 增加光暈效果 */
+    font-size: 3rem;
+    color: var(--primary-color);
 }
 
 .hero-section .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--text-color);
     opacity: 0.8;
 }
 
-/* --- 關於我 & 聯絡區塊 (已修改) --- */
-.about-section .project-card {
-    max-width: 600px; /* 限制卡片寬度，避免文字太長 */
-    margin: 0 auto; /* 讓卡片本身在區塊內置中 */
-}
-
-.contact-section {
+/* --- 關於我 & 聯絡區塊 --- */
+.about-section, .contact-section {
     text-align: center;
 }
 
 /* --- 專案區塊 --- */
+.projects-section h2 {
+    text-align: center;
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -163,13 +144,11 @@ section {
     text-decoration: none;
     font-weight: bold;
     margin-top: 1rem;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(79, 209, 197, 0.3);
+    background-color: #38b2ac; /* 加深一點的強調色 */
 }
 
 /* --- 頁尾 --- */
@@ -177,7 +156,6 @@ section {
     background-color: #111827;
     text-align: center;
     padding: 2rem 0;
-    margin-top: 40px;
 }
 
 .social-links a {
@@ -198,15 +176,6 @@ section {
 }
 
 /* --- 響應式設計 --- */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 3.5rem;
-    }
-    .hero-section .subtitle {
-        font-size: 1.2rem;
-    }
-}
-
 @media (max-width: 600px) {
     .navbar .container {
         flex-direction: column;
@@ -216,16 +185,7 @@ section {
         margin-top: 1rem;
     }
 
-    .hero-section {
-        text-align: center; /* 在小螢幕上恢復置中 */
-        justify-content: center;
-    }
-
-    .hero-section .container {
-        padding-left: 0;
-    }
-
     .hero-section h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 }
