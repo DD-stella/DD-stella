@@ -175,6 +175,116 @@ section {
     opacity: 0.7;
 }
 
+/* --- 了解我頁面 --- */
+.page-hero {
+    padding: 80px 0 60px;
+    text-align: center;
+    background-color: #111827;
+}
+
+.page-hero h1 {
+    font-size: 2.75rem;
+    color: var(--primary-color);
+}
+
+.page-hero .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.about-section.alt-bg {
+    background-color: #161f2e;
+}
+
+.about-section h3 {
+    margin-top: 2rem;
+    color: var(--primary-color);
+}
+
+.center-text {
+    text-align: center;
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+}
+
+.badge-list, .award-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.badge-list .badge {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+.award-list {
+    flex-direction: column;
+}
+
+.award-list li {
+    background-color: var(--card-bg-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 0.75rem;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+.info-table th, .info-table td {
+    padding: 0.6rem 0.8rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-table th {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+}
+
+.about-section .project-card {
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.project-card .tag {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-card .highlight {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
 /* --- 響應式設計 --- */
 @media (max-width: 600px) {
     .navbar .container {

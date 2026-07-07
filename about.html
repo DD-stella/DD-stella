@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解我 - 柯宇鴻</title>
+
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- 連結外部 CSS 樣式表 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">柯宇鴻</a>
+            <ul class="nav-links">
+                <li><a href="index.html">回首頁</a></li>
+                <li><a href="#profile">簡歷</a></li>
+                <li><a href="#projects">實務專題</a></li>
+                <li><a href="#plan">學習計畫</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊 -->
+    <header id="hero" class="page-hero">
+        <div class="container">
+            <h1>柯宇鴻 Bruce Ko</h1>
+            <p class="subtitle">電子工程系 · 從好奇心出發的工程之路</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- 個人簡歷 -->
+        <section id="profile" class="about-section">
+            <div class="container">
+                <h2 class="section-title">個人簡歷</h2>
+
+                <h3>專業證照</h3>
+                <ul class="badge-list">
+                    <li class="badge">工業電子丙級</li>
+                    <li class="badge">電腦硬體裝修丙級</li>
+                    <li class="badge">電腦硬體裝修乙級</li>
+                    <li class="badge">PVQC 專業英文</li>
+                    <li class="badge">GTC 全民科技力認證－英文看打輸入</li>
+                </ul>
+
+                <h3>獲獎紀錄</h3>
+                <ul class="award-list">
+                    <li>全國高級中等學校學生技藝競賽－工業電子金手獎第 6 名</li>
+                    <li>全國專題暨創意製作競賽－專題組第一名</li>
+                    <li>2023 全國新興科技暨資訊應用創意競賽－第二名</li>
+                    <li>南台科技大學電資類創意競賽－金牌獎</li>
+                    <li>我思故我在全國高中智能創客企劃爭霸賽－創意獎</li>
+                    <li>2024 全國電子設計創意競賽－佳作</li>
+                    <li>暨南科技大學論文發表</li>
+                </ul>
+
+                <h3>學業表現</h3>
+                <div class="table-wrap">
+                    <table class="info-table">
+                        <thead>
+                            <tr><th>學期</th><th>1上</th><th>1下</th><th>2上</th><th>2下</th><th>3上</th><th>3下</th><th>平均</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>學期成績</td><td>86</td><td>85</td><td>90</td><td>91</td><td>85</td><td>87</td><td><strong>87.3</strong></td></tr>
+                            <tr><td>班級排名</td><td>2</td><td>4</td><td>1</td><td>2</td><td>5</td><td>1</td><td><strong>2~3</strong></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>電子科系相關經驗</h3>
+                <ul class="award-list">
+                    <li>玩具醫生實習（90 小時）</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 自傳 -->
+        <section class="about-section alt-bg">
+            <div class="container">
+                <h2 class="section-title">自傳</h2>
+                <div class="project-card">
+                    <h3>家庭教育</h3>
+                    <p>來自台中市，父親是水電師傅、母親是家管。父母民主而不失原則的教導，啟發我凡事負責的態度，從小依循自己的性向發展，在父母的支持下奔向資電領域。</p>
+                </div>
+                <div class="project-card">
+                    <h3>學習歷程</h3>
+                    <p><strong>探索興趣：</strong>國三接觸 C# 撰寫猜數字遊戲，首次感受到學習的樂趣；進入電子科後接觸 STM32，並做出貓咪定時餵食機。</p>
+                    <p><strong>單晶片：</strong>透過研習釐清硬體底層韌體設定觀念，寫過計程車跳表、電梯控制、無人商店、貪食蛇等程式，體會到架構規劃、分時多工與電路穩定的重要性。</p>
+                    <p><strong>考取證照：</strong>高中兩年陸續考取工業電子丙級、硬體裝修丙級，後續再挑戰網路伺服器架構並考取硬體裝修乙級。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 實務專題 -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">實務專題</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>GreenDroid －協調評估與健康諮詢機器人</h3>
+                        <p class="tag">年長者協調評估・健康諮詢・互動機器人</p>
+                        <p>因應台灣高齡化社會的照護需求，設計多功能智慧互動機器人 GreenDroid：結合手勢辨識、語音互動（STT/TTS）、本地端 LLM（LM Studio）問答、ESP32CAM 影像辨識、MQTT 感測器資料傳輸，並用 Unity 打造遊戲化互動介面。五人小組中負責電路設計、程式撰寫與焊接佈線。</p>
+                        <p class="highlight">全國專題暨創意製作競賽第一名・南台科大金牌獎・多項全國競賽入選</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>星時代智慧書架（畢業專題）</h3>
+                        <p class="tag">溫濕度感測・找書工具・時間提醒</p>
+                        <p>為解決圖書館找書困難的問題，結合 RFID 感測與物聯網技術，打造可分類書籍、查詢借還紀錄的智慧書架，並以溫濕度感測搭配 Telegram 通知管理員除濕，提升書籍保存與管理效率。三人小組中擔任組長，負責電路設計、程式撰寫與焊接佈線。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 未來學習計畫 -->
+        <section id="plan" class="about-section alt-bg">
+            <div class="container">
+                <h2 class="section-title">未來學習計畫</h2>
+                <p class="center-text">目標：成為 IC 設計研發工程師</p>
+                <div class="plan-grid">
+                    <div class="project-card">
+                        <h3>近程（統測後～入學前）</h3>
+                        <p>預習工程數學（傅立葉、矩陣、微積分、向量）；加強物理化學與英文聽力（多益 500+）；學習 Java / Python，深入研究 STM32 系列微控制器。</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>中程（大一～大四）</h3>
+                        <p>大一扎根微積分、物理、數位邏輯，考取全民英檢中級；大二鑽研電子學、計算機工程與積體電路系統；大三投入專題與 FPGA、半導體製程；大四整合校外實習，精通混合訊號 IC 設計，考取多益 700+。</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>遠程（畢業～就業）</h3>
+                        <p>考取研究所深化學術理論，並進入 IC 設計產業累積實務經驗，為台灣科技產業貢獻心力。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社團與其他 -->
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">社團・幹部・其他</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>幹部經歷</h3>
+                        <p>三年間曾擔任衛生股長、副班長、社長與副社長，在磨練中累積團隊管理經驗。</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>電子研究創課社</h3>
+                        <p>學習電路圖繪製、電路板印刷與 3D 列印軟體（Tinkercad、OnShape、Cura），並曾到台中國資圖展示社團成果。</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>其他榮譽</h3>
+                        <p>當選模範生；參加 GTC 全民科技力認證並考取打字證照；校內英文聽力與體適能競賽皆獲佳績。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="contact-section">
+            <div class="container">
+                <h2>謝謝閱讀</h2>
+                <p>想知道更多細節，歡迎回首頁看看，或直接與我聯繫！</p>
+                <a href="index.html" class="btn">回首頁</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">&copy; 2025 柯宇鴻. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
