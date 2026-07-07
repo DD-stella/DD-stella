@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>禿子跟著月亮走，我們跟著禿子走</title>
-    
+    <title>柯宇鴻 Bruce Ko</title>
+
     <!-- 引入 Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
+
     <!-- 連結外部 CSS 樣式表 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- 落葉效果 -->
+    <div class="leaves" aria-hidden="true">
+        <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
+        <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
+        <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
+        <span class="leaf"></span><span class="leaf"></span>
+    </div>
+
     <!-- 導覽列 -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">韓國瑜</a>
+            <a href="#" class="logo">柯宇鴻</a>
             <ul class="nav-links">
                 <li><a href="#about">關於我</a></li>
                 <li><a href="#projects">專案</a></li>
@@ -30,9 +38,8 @@
     <!-- 英雄區塊 -->
     <header id="hero" class="hero-section">
         <div class="container">
-            <h1>韓國瑜</h1>
-            <p class="subtitle">光頭工程系</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1mJKyTBQ89hwKA9P3CpMjrcqdMRvfdkyYrA&s" width="194" height="260">
+            <h1>柯宇鴻 Bruce Ko</h1>
+            <p class="subtitle">電子工程・嵌入式系統與機器人開發</p>
         </div>
     </header>
 
@@ -44,7 +51,7 @@
                 <!-- 將自我介紹文字放入卡片中 -->
                 <div class="project-card">
                     <p>
-                        非韓不投，韓我X投！！！
+                        我是柯宇鴻（Bruce Ko），專注於嵌入式系統、機器人與物聯網開發。從研究單晶片到打造互動機器人，我喜歡把好奇心一步步做成看得到、摸得到的作品，目前持續透過專題與實習累積實作經驗。
                     </p>
                     <a href="about.html" class="btn">了解我</a>
                 </div>
@@ -57,13 +64,15 @@
                 <h2>精選專案</h2>
                 <div class="project-grid">
                     <div class="project-card">
-                        <h3>專案一：高雄發大財</h3>
-                        <p>$$$</p>
+                        <h3>專案一：GreenDroid－協調評估與健康諮詢機器人</h3>
+                        <p class="tag">全國專題暨創意製作競賽・專題組第一名</p>
+                        <p>結合手勢辨識、語音互動與本地端 LLM 問答的智慧互動機器人，協助評估年長者的協調能力並提供健康諮詢，是我在校期間投入最多心力的專題作品。</p>
+                        <a href="about.html#projects" class="btn">看更多專題</a>
                     </div>
                     <div class="project-card">
-                        <h3>專案二：南北菜蟲一起串聯</h3>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">gay.com</a>
-                        <p>bug</p>
+                        <h3>專案二：MIT 自駕船實習</h3>
+                        <p class="tag">Autonomous Surface Vehicle・進行中</p>
+                        <p>目前參與 MIT 自駕船相關實習，投入感測器整合、嵌入式系統開發與自主導航測試，持續累積跨領域的機器人系統實作經驗。</p>
                     </div>
                 </div>
             </div>
@@ -74,7 +83,7 @@
             <div class="container">
                 <h2>聯絡我</h2>
                 <p>歡迎隨時透過 Email 與我聯繫！</p>
-                <a href="mailto:gay@gmail.com" class="btn">寄送 Email</a>
+                <a href="mailto:bruceko2004@gmail.com" class="btn">寄送 Email</a>
             </div>
         </section>
     </main>
@@ -83,11 +92,10 @@
     <footer class="footer">
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com" target="_blank">GitHub</a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">gay</a>
+                <a href="https://github.com/DD-stella" target="_blank">GitHub</a>
+                <a href="mailto:bruceko2004@gmail.com">Email</a>
             </div>
-            <p class="copyright">&copy; 2025 gay. All Rights Reserved.</p>
+            <p class="copyright">&copy; 2025 柯宇鴻. All Rights Reserved.</p>
         </div>
     </footer>
 

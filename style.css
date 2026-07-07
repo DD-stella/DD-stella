@@ -385,6 +385,104 @@ section {
     font-style: italic;
 }
 
+/* --- 落葉效果 --- */
+.leaves {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.leaf {
+    position: absolute;
+    top: -8%;
+    width: 12px;
+    height: 12px;
+    border-radius: 0% 100% 0% 100%;
+    opacity: 0.7;
+    animation-name: leaf-fall, leaf-sway;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: normal, alternate;
+}
+
+.leaf:nth-child(odd) {
+    background: var(--primary-color);
+}
+
+.leaf:nth-child(even) {
+    background: #a8642a;
+}
+
+@keyframes leaf-fall {
+    from { transform: translateY(-10vh) rotate(0deg); }
+    to { transform: translateY(110vh) rotate(360deg); }
+}
+
+@keyframes leaf-sway {
+    from { margin-left: -30px; }
+    to { margin-left: 30px; }
+}
+
+.leaf:nth-child(1) { left: 2%; width: 10px; height: 10px; animation-duration: 16s, 4s; animation-delay: 0s, 0s; }
+.leaf:nth-child(2) { left: 9%; width: 15px; height: 15px; animation-duration: 21s, 5s; animation-delay: -3s, -1s; }
+.leaf:nth-child(3) { left: 17%; width: 11px; height: 11px; animation-duration: 13s, 3.5s; animation-delay: -6s, -0.5s; }
+.leaf:nth-child(4) { left: 26%; width: 14px; height: 14px; animation-duration: 19s, 4.5s; animation-delay: -2s, -2s; }
+.leaf:nth-child(5) { left: 34%; width: 9px; height: 9px; animation-duration: 15s, 3s; animation-delay: -9s, -1.5s; }
+.leaf:nth-child(6) { left: 43%; width: 16px; height: 16px; animation-duration: 23s, 5.5s; animation-delay: -4s, -3s; }
+.leaf:nth-child(7) { left: 51%; width: 12px; height: 12px; animation-duration: 17s, 4s; animation-delay: -11s, -0.8s; }
+.leaf:nth-child(8) { left: 59%; width: 10px; height: 10px; animation-duration: 14s, 3.2s; animation-delay: -1s, -2.5s; }
+.leaf:nth-child(9) { left: 67%; width: 15px; height: 15px; animation-duration: 20s, 4.8s; animation-delay: -7s, -1s; }
+.leaf:nth-child(10) { left: 75%; width: 11px; height: 11px; animation-duration: 18s, 3.8s; animation-delay: -5s, -2s; }
+.leaf:nth-child(11) { left: 83%; width: 13px; height: 13px; animation-duration: 22s, 5s; animation-delay: -10s, -3.5s; }
+.leaf:nth-child(12) { left: 91%; width: 9px; height: 9px; animation-duration: 15s, 3.5s; animation-delay: -8s, -0.3s; }
+.leaf:nth-child(13) { left: 96%; width: 14px; height: 14px; animation-duration: 24s, 5.2s; animation-delay: -12s, -1.8s; }
+.leaf:nth-child(14) { left: 12%; width: 8px; height: 8px; animation-duration: 12s, 2.8s; animation-delay: -4s, -0.6s; }
+
+/* --- 成績分頁 --- */
+.tab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.tab-btn {
+    font-family: var(--font-heading);
+    letter-spacing: 0.04em;
+    font-size: 0.9rem;
+    background: var(--card-bg-color);
+    color: var(--text-muted);
+    border: 1px solid var(--primary-color-soft);
+    padding: 8px 22px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.tab-btn.active {
+    background: linear-gradient(180deg, #e6c14f, var(--primary-color-dark));
+    color: #1a1209;
+    border-color: #6f5717;
+    font-weight: 700;
+}
+
+.tab-panel {
+    display: none;
+    margin-top: 1.5rem;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
 /* --- 響應式設計 --- */
 @media (max-width: 600px) {
     .navbar .container {
@@ -404,5 +502,12 @@ section {
     .page-hero::before, .page-hero::after {
         width: 260px;
         height: 260px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .leaf {
+        animation: none;
+        display: none;
     }
 }

@@ -15,6 +15,14 @@
 </head>
 <body>
 
+    <!-- 落葉效果 -->
+    <div class="leaves" aria-hidden="true">
+        <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
+        <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
+        <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
+        <span class="leaf"></span><span class="leaf"></span>
+    </div>
+
     <!-- 導覽列 -->
     <nav class="navbar">
         <div class="container">
@@ -63,16 +71,37 @@
                 </ul>
 
                 <h3>學業表現</h3>
-                <div class="table-wrap">
-                    <table class="info-table">
-                        <thead>
-                            <tr><th>學期</th><th>1上</th><th>1下</th><th>2上</th><th>2下</th><th>3上</th><th>3下</th><th>平均</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>學期成績</td><td>86</td><td>85</td><td>90</td><td>91</td><td>85</td><td>87</td><td><strong>87.3</strong></td></tr>
-                            <tr><td>班級排名</td><td>2</td><td>4</td><td>1</td><td>2</td><td>5</td><td>1</td><td><strong>2~3</strong></td></tr>
-                        </tbody>
-                    </table>
+                <div class="tab-buttons">
+                    <button type="button" class="tab-btn active" data-tab="hs-grades">高中總成績</button>
+                    <button type="button" class="tab-btn" data-tab="uni-grades">大學成績（大一～大四）</button>
+                </div>
+
+                <div class="tab-panel active" id="hs-grades">
+                    <div class="table-wrap">
+                        <table class="info-table">
+                            <thead>
+                                <tr><th>學期</th><th>1上</th><th>1下</th><th>2上</th><th>2下</th><th>3上</th><th>3下</th><th>平均</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>學期成績</td><td>86</td><td>85</td><td>90</td><td>91</td><td>85</td><td>87</td><td><strong>87.3</strong></td></tr>
+                                <tr><td>班級排名</td><td>2</td><td>4</td><td>1</td><td>2</td><td>5</td><td>1</td><td><strong>2~3</strong></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="uni-grades">
+                    <div class="table-wrap">
+                        <table class="info-table">
+                            <thead>
+                                <tr><th>學期</th><th>1上</th><th>1下</th><th>2上</th><th>2下</th><th>3上</th><th>3下</th><th>4上</th><th>4下</th><th>平均</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>學期成績</td><td>－</td><td>－</td><td>－</td><td>－</td><td>－</td><td>－</td><td>－</td><td>－</td><td><strong>－</strong></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="center-text">資料整理中，稍後補上大學成績。</p>
                 </div>
 
                 <h3>電子科系相關經驗</h3>
@@ -178,6 +207,17 @@
             <p class="copyright">&copy; 2025 柯宇鴻. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+                document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
